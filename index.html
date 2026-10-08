@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Nurul Anisah - Portofolio</title>
+  <meta name="description" content="Portofolio Nurul Anisah, Quality Control dan QA: pengalaman, keahlian, dan kontak.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,500;12..96,800&family=Newsreader:opsz,wght@6..72,400;6..72,500&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <header class="top">
+    <a href="#atas" class="brand">Nurul Anisah</a>
+    <nav>
+      <a href="#pengalaman">Pengalaman</a>
+      <a href="#keahlian">Keahlian</a>
+      <a href="#kontak">Kontak</a>
+      <button id="tema" type="button" aria-label="Ganti tema terang/gelap">Tema</button>
+    </nav>
+  </header>
+
+  <main id="atas">
+    <section class="hero">
+      <p class="intro">Quality Control &amp; QA di Jakarta</p>
+      <h1>Saya memastikan produk berfungsi sesuai kebutuhan sebelum sampai ke pengguna.</h1>
+      <p class="lead">Halo, saya Nurul Anisah. Saya teliti dalam menganalisis dan menguji produk agar sesuai standar kualitas. Sejak 2023 saya menyusun test case, menguji secara manual, melaporkan bug, dan menyiapkan dokumen UAT.</p>
+      <a class="btn" href="#kontak">Hubungi saya</a>
+    </section>
+
+    <section id="pengalaman">
+      <h2>Pengalaman</h2>
+      <div id="filter" class="filter" role="group" aria-label="Filter pengalaman"></div>
+      <ul id="daftar" class="daftar"></ul>
+    </section>
+
+    <section id="pendidikan">
+      <h2>Pendidikan &amp; sertifikasi</h2>
+      <ul id="edu" class="daftar"></ul>
+    </section>
+
+    <section id="keahlian">
+      <h2>Keahlian</h2>
+      <ul id="skill" class="skill"></ul>
+    </section>
+
+    <section id="kontak">
+      <h2>Kontak</h2>
+      <p class="lead">Ada pertanyaan atau kesempatan kerja? Kirim pesan lewat form ini.</p>
+      <form id="form" class="form">
+        <label>Nama <input name="nama" required autocomplete="name"></label>
+        <label>Email <input name="email" type="email" required autocomplete="email"></label>
+        <label>Pesan <textarea name="pesan" rows="4" required></textarea></label>
+        <button class="btn" type="submit">Kirim lewat email</button>
+      </form>
+      <p class="sosial" id="sosial"></p>
+    </section>
+  </main>
+
+  <footer>© <span id="tahun"></span> Nurul Anisah</footer>
+  <script src="script.js"></script>
+</body>
+</html>
