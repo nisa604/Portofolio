@@ -33,14 +33,14 @@ const skills = {
 // docs = [{label, url}] for documents, e.g. {label:"Test Cases", url:"https://..."}. Use [] for none.
 // Only share documents made from public apps (e.g. SauceDemo) – never company or client documents.
 const projects = [
- {name:"SauceDemo Test Automation", type:"Automation", role:"QA Automation (Personal project)",
+ {name:"SauceDemo", type:"Automation", role:"QA Automation (Personal project)",
   desc:"Automated end-to-end tests for the SauceDemo demo e-commerce site.",
   scope:`SauceDemo is a public demo e-commerce website. I built automated tests covering ${T("flows, e.g. login, cart, checkout")}.`,
   tools:[T("Tool(s) you used, e.g. Selenium / Playwright / Cypress")],
   did:[`Automated ${T("number")} test scenarios for ${T("flows")}.`, T("e.g. structure of the framework, reports, or CI setup")],
   results:[T("e.g. regression suite runs in X minutes instead of Y manually")],
   images:[], links:[], docs:[]},
- {name:"SauceDemo Manual Testing", type:"Manual", role:"QA Tester (Personal project)",
+ {name:"SauceDemo", type:"Manual", role:"QA Tester (Personal project)",
   desc:"Test scenarios, test cases, and bug reports for the SauceDemo demo e-commerce site.",
   scope:`Manual testing documentation for the public SauceDemo website, covering ${T("flows, e.g. login, cart, checkout")}.`,
   tools:[T("e.g. Google Sheets, browser DevTools")],
@@ -48,12 +48,16 @@ const projects = [
   results:[T("e.g. X% of test cases passed, Y bugs found")],
   images:[], links:[], docs:[{label:"Test Cases", url:""},{label:"Bug Reports", url:""}]},
  {name:"Personal Finance App", type:"Development", role:"Developer",
-  desc:"A simple personal finance app that emails a monthly report on the 25th of each month.",
-  scope:"Sends a monthly financial report by email on the 25th of every month. WhatsApp delivery is a possible later addition.",
-  tools:[T("Tech stack")],
-  did:[T("What you built and tested")],
-  results:[T("What it achieves, e.g. saves X minutes per month")],
-  images:[], links:[], docs:[]}
+  desc:"A personal finance app that records income and expenses and emails a monthly report every 25th.",
+  scope:"A personal finance app to record income and expenses and calculate the totals. A monthly report covering the 25th to the 25th of the next month is sent automatically by email on the 25th.",
+  tools:["Google Sheets","Google Apps Script","HTML / CSS / JavaScript","GitHub Pages"],
+  did:[
+    "Built a web page, hosted on GitHub Pages, for entering income and expenses, with a spending chart per category and category icons.",
+    "Used Google Sheets as the data store and Apps Script to calculate totals and generate the monthly report.",
+    "Automated the report to be emailed on the 25th, covering the period from the 25th to the 25th of the next month."],
+  results:[
+    "Income and expenses are recorded in one place and summarized automatically, with the report delivered by email every month without manual work."],
+  images:[], links:[{label:"Financial Report", url:"https://nisa604.github.io/Keuangan/"}], docs:[]}
 ];
 const education = [
  {t:"Universitas Bina Nusantara", s:"Bachelor of Computer Science", d:"Nov 2024 – Present", n:"Final project (in progress): Hybrid Recommendation System and Natural Language Processing in the “Smart Recipe” Progressive Web App"},
