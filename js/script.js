@@ -8,9 +8,9 @@ const experience = [
   `Supported the UAT phase with test documentation. ${T("Add the Telco product type, e.g. billing, customer portal")}`]},
  {role:"Software Tester", co:"PT Neural Technologies Indonesia, Jakarta", date:"Oct 2023 – Jul 2025", points:[
   `Designed and executed 300+ black box test cases (manual testing) for ${T("product/module")} in an Agile environment, achieving a ~90% pass rate.`,
-  `Documented and tracked ${T("number")} defects in a structured bug-tracking spreadsheet (severity, reproduction steps, status), then verified fixes until all reported failures were resolved.`,
-  `${T("Add only if true:")} Prepared test documentation such as test cases and execution reports.`,
-  `${T("Add only if true:")} Collaborated with developers and stakeholders to clarify requirements and confirm fixes.`]},
+  `Documented and tracked 20 defects in a structured bug-tracking spreadsheet (severity, reproduction steps, status), then verified fixes until all reported failures were resolved.`,
+  `Prepared test documentation, including test cases, test execution reports, and user acceptance testing.`,
+  `Collaborated with developers and stakeholders to clarify requirements and confirm bug fixes.`]},
  {role:"Odoo Developer Intern", co:"PT Neural Technologies Indonesia", date:"Jun 2023 – Sep 2023", points:[
   "Developed and customized Odoo-based ERP modules, implemented new features, and debugged issues to match user needs and business processes."]},
  {role:"Mobile App Developer Virtual Intern", co:"Mandiri x Rakamin Academy", date:"Sep 2023", points:[
@@ -37,20 +37,6 @@ const projects = [
   did:[`Automated ${T("number")} test scenarios for ${T("flows")}.`, T("e.g. structure of the framework, reports, or CI setup")],
   results:[T("e.g. regression suite runs in X minutes instead of Y manually")],
   images:[], links:[]},
- {name:T("Project / app name"), role:"QA Tester (Academic)",
-  desc:`Wrote test cases, executed black box testing, and documented ${T("number")} bugs for ${T("short app description")}.`,
-  scope:T("What the app does, who uses it, and which features you tested"),
-  tools:[T("Tools, e.g. Jira, Postman, Katalon")],
-  did:[`Wrote ${T("number")} test cases for ${T("modules")}.`, `Executed black box testing and reported ${T("number")} bugs.`],
-  results:[T("e.g. 95% test cases passed, all critical bugs fixed before release")],
-  images:[], links:[]},
- {name:T("Project / app name"), role:"Quality Control (Telkom)",
-  desc:T("What you tested, tools used, and the result"),
-  scope:T("Product and scope of testing"),
-  tools:[T("Tools")],
-  did:[T("Main testing activities")],
-  results:[T("Measurable outcomes")],
-  images:[], links:[]},
  {name:"Personal Finance App", role:"Developer",
   desc:"A simple personal finance app that emails a monthly report on the 25th of each month.",
   scope:"Sends a monthly financial report by email on the 25th of every month. WhatsApp delivery is a possible later addition.",
@@ -62,9 +48,7 @@ const projects = [
 const education = [
  {t:"Universitas Bina Nusantara", s:"Bachelor of Computer Science", d:"Nov 2024 – Present", n:"Final project (in progress): Hybrid Recommendation System and Natural Language Processing in the “Smart Recipe” Progressive Web App"},
  {t:"Politeknik Negeri Bandung", s:"Diploma in Computer Science · GPA 3.32 / 4.00", d:"Aug 2021 – Aug 2024", n:"Final project: Web-Based RT/RW Net Voucher Sales Application Using Value-Based Segmentation as a Marketing Strategy"},
- {t:"ISTQB", s:`Certification · ${T("level, e.g. Foundation")} · ${T("issuer")}`, d:T("year")},
- {t:"Software Quality Assurance", s:`Certification · ${T("issuer")}`, d:T("year")},
- {t:"IT Audit", s:`Certification · ${T("issuer")}`, d:T("year")}
+ {t:"Software Quality Assurance", s:"Certification · Arutala Lab", d:"Oct 2024 – Oct 2027"}
 ];
 // ===== Rendering =====
 const $ = id => document.getElementById(id);
