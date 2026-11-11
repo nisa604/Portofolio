@@ -28,22 +28,32 @@ const skills = {
 // Each project opens a detail pop-up when clicked.
 // scope = overview, tools = list, did = what you did, results = outcomes,
 // images = screenshots saved in images/projects/ (e.g. "images/projects/test-report.png"),
+// type = label on the card: "Automation", "Manual", "API", "Development", etc.
 // links = [{label, url}] for a GitHub repo and/or live demo. Use [] for none.
+// docs = [{label, url}] for documents, e.g. {label:"Test Cases", url:"https://..."}. Use [] for none.
+// Only share documents made from public apps (e.g. SauceDemo) – never company or client documents.
 const projects = [
- {name:"SauceDemo Test Automation", role:"QA Automation (Personal project)",
+ {name:"SauceDemo Test Automation", type:"Automation", role:"QA Automation (Personal project)",
   desc:"Automated end-to-end tests for the SauceDemo demo e-commerce site.",
   scope:`SauceDemo is a public demo e-commerce website. I built automated tests covering ${T("flows, e.g. login, cart, checkout")}.`,
   tools:[T("Tool(s) you used, e.g. Selenium / Playwright / Cypress")],
   did:[`Automated ${T("number")} test scenarios for ${T("flows")}.`, T("e.g. structure of the framework, reports, or CI setup")],
   results:[T("e.g. regression suite runs in X minutes instead of Y manually")],
-  images:[], links:[]},
- {name:"Personal Finance App", role:"Developer",
+  images:[], links:[], docs:[]},
+ {name:"SauceDemo Manual Testing", type:"Manual", role:"QA Tester (Personal project)",
+  desc:"Test scenarios, test cases, and bug reports for the SauceDemo demo e-commerce site.",
+  scope:`Manual testing documentation for the public SauceDemo website, covering ${T("flows, e.g. login, cart, checkout")}.`,
+  tools:[T("e.g. Google Sheets, browser DevTools")],
+  did:[`Wrote ${T("number")} test scenarios and test cases.`, `Executed the tests and documented ${T("number")} bugs with screenshots and reproduction steps.`],
+  results:[T("e.g. X% of test cases passed, Y bugs found")],
+  images:[], links:[], docs:[{label:"Test Cases", url:""},{label:"Bug Reports", url:""}]},
+ {name:"Personal Finance App", type:"Development", role:"Developer",
   desc:"A simple personal finance app that emails a monthly report on the 25th of each month.",
   scope:"Sends a monthly financial report by email on the 25th of every month. WhatsApp delivery is a possible later addition.",
   tools:[T("Tech stack")],
   did:[T("What you built and tested")],
   results:[T("What it achieves, e.g. saves X minutes per month")],
-  images:[], links:[]}
+  images:[], links:[], docs:[]}
 ];
 const education = [
  {t:"Universitas Bina Nusantara", s:"Bachelor of Computer Science", d:"Nov 2024 – Present", n:"Final project (in progress): Hybrid Recommendation System and Natural Language Processing in the “Smart Recipe” Progressive Web App"},
@@ -54,17 +64,18 @@ const education = [
 const $ = id => document.getElementById(id);
 $("exp").innerHTML = experience.map(e=>`<div class="item"><div class="top"><div><h3>${e.role}</h3><div class="co">${e.co}</div></div><div class="date">${e.date}</div></div><ul>${e.points.map(p=>`<li>${p}</li>`).join("")}</ul></div>`).join("");
 $("skillList").innerHTML = Object.entries(skills).map(([g,l])=>`<div class="group"><h3>${g}</h3><div class="chips">${l.map(s=>`<span class="chip">${s}</span>`).join("")}</div></div>`).join("");
-$("proj").innerHTML = projects.map((p,i)=>`<article class="item project" tabindex="0" role="button" data-i="${i}" aria-label="Open details: ${p.name.replace(/<[^>]*>/g,"")}"><h3>${p.name}</h3><div class="co">${p.role}</div><p>${p.desc}</p><span class="more">View details →</span></article>`).join("");
+$("proj").innerHTML = projects.map((p,i)=>`<article class="item project" tabindex="0" role="button" data-i="${i}" aria-label="Open details: ${p.name.replace(/<[^>]*>/g,"")}"><span class="tag">${p.type}</span><h3>${p.name}</h3><div class="co">${p.role}</div><p>${p.desc}</p><span class="more">View details →</span></article>`).join("");
 const modal = $("modal"), mb = $("modalBody");
 const list = a => `<ul>${a.map(x=>`<li>${x}</li>`).join("")}</ul>`;
 function openProject(i){
  const p = projects[i];
- mb.innerHTML = `<h3>${p.name}</h3><div class="co">${p.role}</div>
+ mb.innerHTML = `<span class="tag">${p.type}</span><h3>${p.name}</h3><div class="co">${p.role}</div>
   <h4>Overview</h4><p>${p.scope}</p>
   <h4>Tools</h4><div class="chips">${p.tools.map(t=>`<span class="chip">${t}</span>`).join("")}</div>
   <h4>What I did</h4>${list(p.did)}
   <h4>Results</h4>${list(p.results)}
   ${p.images.length?`<h4>Screenshots</h4><div class="shots">${p.images.map(s=>`<img src="${s}" alt="" loading="lazy" onerror="this.remove()">`).join("")}</div>`:""}
+  ${p.docs.filter(d=>d.url).length?`<h4>Documents</h4><div class="btns">${p.docs.filter(d=>d.url).map(d=>`<a class="btn" href="${d.url}" target="_blank" rel="noopener">${d.label} ↗</a>`).join("")}</div>`:""}
   ${p.links.length?`<div class="btns">${p.links.map(l=>`<a class="btn fill" href="${l.url}" target="_blank" rel="noopener">${l.label} →</a>`).join("")}</div>`:""}`;
  modal.showModal();
 }

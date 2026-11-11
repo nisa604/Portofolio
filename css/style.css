@@ -89,3 +89,7 @@ dialog ul{margin:0;padding-left:18px}dialog p{margin:0}
 
 .copy{border:1px solid var(--line);background:none;color:var(--muted);border-radius:999px;padding:6px 14px;font:inherit;font-size:.8rem;cursor:pointer;transition:.25s}
 .copy:hover{border-color:var(--accent);color:var(--accent)}
+
+.tag{display:inline-block;font-size:.68rem;letter-spacing:.1em;text-transform:uppercase;color:var(--accent);border:1px solid color-mix(in srgb,var(--accent) 40%,transparent);border-radius:999px;padding:1px 10px;margin-bottom:8px}
+dialog .btns{margin-top:12px}
+.project .tag{align-self:flex-start}
