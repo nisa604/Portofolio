@@ -1,64 +1,58 @@
 <!DOCTYPE html>
-<html lang="id">
+<html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Nurul Anisah - Portofolio</title>
-  <meta name="description" content="Portofolio Nurul Anisah, Quality Control dan QA: pengalaman, keahlian, dan kontak.">
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,500;12..96,800&family=Newsreader:opsz,wght@6..72,400;6..72,500&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="style.css">
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Nurul Anisah – QA / Quality Control Portfolio</title>
+<meta name="description" content="Portfolio of Nurul Anisah, Quality Control / QA professional in Jakarta.">
+<link rel="stylesheet" href="css/style.css">
 </head>
 <body>
-  <header class="top">
-    <a href="#atas" class="brand">Nurul Anisah</a>
-    <nav>
-      <a href="#pengalaman">Pengalaman</a>
-      <a href="#keahlian">Keahlian</a>
-      <a href="#kontak">Kontak</a>
-      <button id="tema" type="button" aria-label="Ganti tema terang/gelap">Tema</button>
-    </nav>
-  </header>
+<header><div class="wrap"><nav>
+<strong>Nurul Anisah</strong>
+<button id="menu" aria-label="Menu">☰</button>
+<ul id="links"><li><a href="#about">About</a></li><li><a href="#experience">Experience</a></li><li><a href="#skills">Skills</a></li><li><a href="#projects">Projects</a></li><li><a href="#education">Education</a></li><li><a href="#contact">Contact</a></li></ul>
+</nav></div></header>
 
-  <main id="atas">
-    <section class="hero">
-      <p class="intro">Quality Control &amp; QA di Jakarta</p>
-      <h1>Saya memastikan produk berfungsi sesuai kebutuhan sebelum sampai ke pengguna.</h1>
-      <p class="lead">Halo, saya Nurul Anisah. Saya teliti dalam menganalisis dan menguji produk agar sesuai standar kualitas. Sejak 2023 saya menyusun test case, menguji secara manual, melaporkan bug, dan menyiapkan dokumen UAT.</p>
-      <a class="btn" href="#kontak">Hubungi saya</a>
-    </section>
+<main class="wrap">
+<div class="hero">
+<div>
+<small>Quality Control · QA · Jakarta</small>
+<h1>Hi, I’m <span>Nurul Anisah.</span></h1>
+<p>I help teams ship reliable software through careful manual testing, clear UAT documentation, and test automation.</p>
+<div class="btns"><a class="btn fill" href="#contact">Get in touch</a><a class="btn" href="CV_Nurul_Anisah.pdf" download>Download CV</a></div>
+</div>
+<div class="photo"><div>NA</div><img src="images/photo.jpg" alt="Nurul Anisah" onerror="this.remove()"></div>
+</div>
+<div class="stats">
+<div class="stat"><b>3+</b><span>Years in QA</span></div>
+<div class="stat"><b>300+</b><span>Test cases executed</span></div>
+<div class="stat"><b>ISTQB</b><span>Certified</span></div>
+</div>
 
-    <section id="pengalaman">
-      <h2>Pengalaman</h2>
-      <div id="filter" class="filter" role="group" aria-label="Filter pengalaman"></div>
-      <ul id="daftar" class="daftar"></ul>
-    </section>
+<section id="about" class="reveal"><h2>About</h2>
+<p>Quality Control / QA professional with 3 years of experience in manual testing, UAT documentation, and test automation in Agile teams. I write test cases, track bugs, and make sure products are ready before release. <span class="todo">Add one sentence about the products you tested or your main achievement.</span></p></section>
 
-    <section id="pendidikan">
-      <h2>Pendidikan &amp; sertifikasi</h2>
-      <ul id="edu" class="daftar"></ul>
-    </section>
+<section id="experience" class="reveal"><h2>Experience</h2><div id="exp"></div></section>
 
-    <section id="keahlian">
-      <h2>Keahlian</h2>
-      <ul id="skill" class="skill"></ul>
-    </section>
+<section id="skills" class="reveal"><h2>Skills</h2><div id="skillList"></div></section>
 
-    <section id="kontak">
-      <h2>Kontak</h2>
-      <p class="lead">Ada pertanyaan atau kesempatan kerja? Kirim pesan lewat form ini.</p>
-      <form id="form" class="form">
-        <label>Nama <input name="nama" required autocomplete="name"></label>
-        <label>Email <input name="email" type="email" required autocomplete="email"></label>
-        <label>Pesan <textarea name="pesan" rows="4" required></textarea></label>
-        <button class="btn" type="submit">Kirim lewat email</button>
-      </form>
-      <p class="sosial" id="sosial"></p>
-    </section>
-  </main>
+<section id="projects" class="reveal"><h2>Projects</h2><div class="grid" id="proj"></div></section>
 
-  <footer>© <span id="tahun"></span> Nurul Anisah</footer>
-  <script src="script.js"></script>
+<section id="education" class="reveal"><h2>Education &amp; Certifications</h2><div id="edu"></div></section>
+
+<section id="contact" class="reveal"><h2>Contact</h2>
+<p>Open to QA / Quality Control opportunities.</p>
+<div class="links">
+<a href="mailto:nurulanisah604@gmail.com" id="emailLink">nurulanisah604@gmail.com</a>
+<button type="button" id="copyEmail" class="copy" aria-label="Copy email address">Copy</button>
+<a href="https://www.linkedin.com/in/nurul-anisah-07b81721b/" target="_blank" rel="noopener">LinkedIn</a>
+<a href="https://github.com/nisa604" target="_blank" rel="noopener">GitHub</a>
+</div></section>
+</main>
+<footer><div class="wrap">© <span id="yr"></span> Nurul Anisah · Jakarta, Indonesia</div></footer>
+
+<dialog id="modal" aria-label="Project details"><button class="close" aria-label="Close">✕</button><div id="modalBody"></div></dialog>
+<script src="js/script.js"></script>
 </body>
 </html>
