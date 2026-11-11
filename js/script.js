@@ -5,9 +5,9 @@ const experience = [
   `Perform quality control across multiple Telco projects, executing 350+ test cases to ensure product quality before release.`,
   `Prepared SIT, UT, and UAT documents, test scenarios, test cases, and bug reports.`,
   `Reported and tracked 20 defects in a spreadsheet-based tracker and followed up with the development team until all were resolved before UAT began.`,
-  `Supported the UAT phase with test documentation. ${T("Add the Telco product type, e.g. billing, customer portal")}`]},
+  `Supported the UAT phase with test documentation.`]},
  {role:"Software Tester", co:"PT Neural Technologies Indonesia, Jakarta", date:"Oct 2023 – Jul 2025", points:[
-  `Designed and executed 300+ black box test cases (manual testing) for ${T("product/module")} in an Agile environment, achieving a ~90% pass rate.`,
+  `Designed and executed 300+ black box test cases (manual testing) for project academic in an Agile environment, achieving a ~90% pass rate.`,
   `Documented and tracked 20 defects in a structured bug-tracking spreadsheet (severity, reproduction steps, status), then verified fixes until all reported failures were resolved.`,
   `Prepared test documentation, including test cases, test execution reports, and user acceptance testing.`,
   `Collaborated with developers and stakeholders to clarify requirements and confirm bug fixes.`]},
